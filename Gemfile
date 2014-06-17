@@ -10,9 +10,9 @@ gem "webster", ">= 0"
 group :development do
   gem "minitest", ">= 0"
   gem "yard", "~> 0.6.0"
-  gem "bundler", "~> 1.0.0"
+  gem "bundler"
   gem "jeweler", "~> 1.6.4"
-  gem "rcov", ">= 0"
+#  gem "rcov", ">= 0" #only covers ruby1.8
   gem "reek", "~> 1.2.8"
   gem "roodi", "~> 2.1.0"
   gem "bluecloth"

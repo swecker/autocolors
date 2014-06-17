@@ -87,7 +87,7 @@ Gem::Specification.new do |s|
     "lib/autocolors/colorscheme.rb",
     "lib/autocolors/mapping.rb",
     "lib/autocolors/mapping.udon",
-    "lib/autocolors/templates/colorscheme.erb.vim",
+    "lib/autocolors/templates/colorscheme.vim.erb",
     "quicktest.html",
     "quicktest_old.html",
     "quicktest_old2.html",

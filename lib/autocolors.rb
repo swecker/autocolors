@@ -13,7 +13,13 @@ module AutoColors
 
     def generate_vim_colors(name=nil)
       scheme = ColorScheme.new(name)
-      template = ERB.new(template('colorscheme.erb.vim'),nil,'-')
+      template = ERB.new(template('colorscheme.vim.erb'),nil,'-')
+      return template.result(binding)
+    end
+
+    def generate_css_colors(name=nil)
+      scheme = ColorScheme.new(name)
+      template = ERB.new(template('colorscheme.css.erb'),nil,'-')
       return template.result(binding)
     end
   end

@@ -1,0 +1,49 @@
+/* <%= scheme.name.upcase %>
+ *
+ * Generated automatically by autocolors version <%= VERSION %>
+ *   https://github.com/josephwecker/autocolors
+ * Public Domain
+ *
+ */
+
+/* <%= scheme.name.upcase %> Light */
+<%- scheme.light.each do |name, data| -%>
+<%- if data[:to_pygments] != '?' -%>
+.autocolor-light .codehilite .<%= data[:to_pygments] %> {
+    color: <%=data[:fg]%>;
+    background-color: <%=data[:bg]%>;
+<%- if data[:styles] =~ /U/ -%>
+    text-decoration: underline;
+<%- elsif data[:styles] =~ /X/ -%>
+    text-decoration: line-through;
+<%- end -%>
+<%- if data[:styles] =~ /I/ -%>
+    font-style: italic;
+<%- end -%>
+<%- if data[:styles] =~ /B/ -%>
+    font-weight: bold;
+<%- end -%>
+}
+<%- end -%>
+<%- end -%>
+
+/* <%= scheme.name.upcase %> Dark */
+<%- scheme.dark.each do |name, data| -%>
+<%- if data[:to_pygments] != '?' -%>
+.autocolor-dark .codehilite .<%= data[:to_pygments] %> {
+    color: <%=data[:fg]%>;
+    background-color: <%=data[:bg]%>;
+<%- if data[:styles] =~ /U/ -%>
+    text-decoration: underline;
+<%- elsif data[:styles] =~ /X/ -%>
+    text-decoration: line-through;
+<%- end -%>
+<%- if data[:styles] =~ /I/ -%>
+    font-style: italic;
+<%- end -%>
+<%- if data[:styles] =~ /B/ -%>
+    font-weight: bold;
+<%- end -%>
+}
+<%- end -%>
+<%- end -%>
